@@ -27,6 +27,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('rust-lang/rust.vim')
   call dein#add('vim-scripts/vim-auto-save')
   call dein#add('leafgarland/typescript-vim')
+  call dein#add('digitaltoad/vim-pug')
   call dein#end()
   call dein#save_state()
 endif
