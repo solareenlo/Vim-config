@@ -31,6 +31,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tomlion/vim-solidity')
   call dein#add('posva/vim-vue')
   call dein#add('nikvdp/ejs-syntax')
+  call dein#add('altercation/vim-colors-solarized')
   call dein#end()
   call dein#save_state()
 endif
@@ -82,7 +83,7 @@ set fileformats=unix,dos
 " 逆は [ set nobackup ]
 set backup
 " バックアップを取得するディレクトリを指定
-set backupdir=~/backup
+set backupdir=~/.vimbackup
 " 検索履歴を残す世代数
 set history=500
 " 検索時に大文字小文字を区別しない
