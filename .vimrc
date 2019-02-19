@@ -32,6 +32,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('posva/vim-vue')
   call dein#add('nikvdp/ejs-syntax')
   call dein#add('altercation/vim-colors-solarized')
+  call dein#add('prettier/vim-prettier')
   call dein#end()
   call dein#save_state()
 endif
@@ -40,6 +41,8 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
+" Prettierがシングルコートを使用するように設定
+let g:prettier#config#single_quote = 'true'
 " Vimがクリップボードを使えるようにする
 set clipboard+=unnamed,autoselect
 " set clipboard=unnamed,autoselect
