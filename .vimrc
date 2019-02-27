@@ -68,8 +68,6 @@ set shiftwidth=2
 " set shiftwidth=4
 " 行頭の余白内で Tab を打ち込むと、'shiftwidth' の数だけインデントする
 set smarttab
-" Vimがクリップボードを使えるようにする
-set clipboard+=unnamed,autoselect
 " 暗い背景色に合わせた配色にする
 set background=dark
 " カーソルラインをハイライト
