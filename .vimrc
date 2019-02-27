@@ -44,8 +44,10 @@ endif
 " Prettierがシングルコートを使用するように設定
 let g:prettier#config#single_quote = 'true'
 " Vimがクリップボードを使えるようにする
+" mac用
 set clipboard+=unnamed,autoselect
-" set clipboard=unnamed,autoselect
+" ubuntu用
+" set clipboard=unnamedplus
 " ファイル名が指定されてVIMが起動した場合はNERDTreeを表示しない
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
