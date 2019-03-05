@@ -33,6 +33,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('nikvdp/ejs-syntax')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('prettier/vim-prettier')
+  call dein#add('osyo-manga/vim-anzu')
   call dein#end()
   call dein#save_state()
 endif
@@ -202,3 +203,13 @@ function! s:GetHighlight(hi)
   let hl = substitute(hl, 'xxx', '', '')
   return hl
 endfunction
+
+" mapping
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
+" clear status
+nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
+" statusline
+set statusline=%{anzu#search_status()}
