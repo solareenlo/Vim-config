@@ -1,5 +1,9 @@
 # Vim-config
 vimの設定ファイル.  
 
-まずはdeinをインストールする.
+1. まずはdeinをインストールする.
 - https://github.com/Shougo/dein.vim
+2. 次にvimのバックアップ用のディレクトリを作成する.
+```bash
+mkdir .vimbackup
+```
