@@ -5,5 +5,6 @@ vimの設定ファイル.
 - https://github.com/Shougo/dein.vim
 2. 次にvimのバックアップ用のディレクトリを作成する.
 ```bash
+cd
 mkdir .vimbackup
 ```
