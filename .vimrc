@@ -32,6 +32,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('posva/vim-vue')
   call dein#add('nikvdp/ejs-syntax')
   call dein#add('altercation/vim-colors-solarized')
+  call dein#add('morhetz/gruvbox')
   call dein#add('prettier/vim-prettier')
   call dein#add('osyo-manga/vim-anzu')
   call dein#end()
@@ -140,6 +141,7 @@ set tabstop=4
 " カラースキームの設定
 " colorscheme desert
 " colorscheme molokai
+" colorscheme gruvbox
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 syntax enable
