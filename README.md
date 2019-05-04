@@ -1,4 +1,4 @@
-# Vim-config
+# vim-config
 vimの設定ファイル.  
 
 1. まずはdeinをインストールする.
