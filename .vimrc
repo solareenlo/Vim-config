@@ -33,7 +33,24 @@ if dein#load_state('~/.cache/dein')
   call dein#add('nikvdp/ejs-syntax')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('morhetz/gruvbox')
-  call dein#add('prettier/vim-prettier')
+  call dein#add('prettier/vim-prettier', {
+    \ 'build': 'npm install',
+    \ 'on_ft': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ]})
   call dein#add('osyo-manga/vim-anzu')
   call dein#end()
   call dein#save_state()
