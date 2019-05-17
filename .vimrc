@@ -15,6 +15,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('scrooloose/nerdtree')
   call dein#add('tpope/vim-fugitive')
   " call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('Yggdroot/indentLine')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('vim-syntastic/syntastic')
   call dein#add('airblade/vim-gitgutter')
@@ -74,6 +75,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nnoremap <C-n> :NERDTreeToggle<CR>
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'unite']
 " オートセーブを自動で有効化
 let g:auto_save = 1
 " インサートモードで自動保存するかどうかの設定
