@@ -53,6 +53,7 @@ if dein#load_state('~/.cache/dein')
     \ 'html',
     \ 'swift' ]})
   call dein#add('osyo-manga/vim-anzu')
+  call dein#add('ryanoasis/vim-devicons')
   call dein#end()
   call dein#save_state()
 endif
@@ -236,3 +237,7 @@ nmap # <Plug>(anzu-sharp-with-echo)
 nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
 " statusline
 set statusline=%{anzu#search_status()}
+
+if exists("g:loaded_webdevicons")
+  call webdevicons#refresh()
+endif
