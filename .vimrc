@@ -54,6 +54,7 @@ if dein#load_state('~/.cache/dein')
     \ 'swift' ]})
   call dein#add('osyo-manga/vim-anzu')
   call dein#add('ryanoasis/vim-devicons')
+  call dein#add('ekalinin/Dockerfile.vim')
   call dein#end()
   call dein#save_state()
 endif
