@@ -58,6 +58,8 @@ if dein#load_state('~/.cache/dein')
   " call dein#add('lervag/vimtex')
   call dein#add('tokorom/vim-review')
   call dein#add('frazrepo/vim-rainbow')
+  call dein#add('junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' })
+  call dein#add('junegunn/fzf.vim')
   call dein#end()
   call dein#save_state()
 endif
@@ -88,6 +90,8 @@ let g:rainbow_active = 1
 "     \ ]
 " let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 " let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+" fzfの設定
+set rtp+=~/.fzf
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2

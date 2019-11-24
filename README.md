@@ -19,13 +19,19 @@ vimの設定ファイル.
 
 4. ターミナルを開いて, 先程インストールしたフォントを設定する.
 
-5. `.vimrc`をダウンロードする.
+5. `fzf`をインストールする．
+    ```bash
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+    ```
+
+6. `.vimrc`をダウンロードする.
     ```bash
     cd
     curl -O https://raw.githubusercontent.com/solareenlo/vim-config/master/.vimrc
     ```
 
-6. `dein.vim`を使ってプラグインをインストールする.
+7. `dein.vim`を使ってプラグインをインストールする.
     ```bash
     :call dein#install()
     ```
