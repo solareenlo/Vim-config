@@ -57,6 +57,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ekalinin/Dockerfile.vim')
   " call dein#add('lervag/vimtex')
   call dein#add('tokorom/vim-review')
+  call dein#add('frazrepo/vim-rainbow')
   call dein#end()
   call dein#save_state()
 endif
@@ -77,6 +78,16 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " NERDTreeを表示するコマンドを設定する
 nnoremap <C-n> :NERDTreeToggle<CR>
+" カッコをレインボーカラーにする
+let g:rainbow_active = 1
+" let g:rainbow_load_separately = [
+"     \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+"     \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+"     \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+"     \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+"     \ ]
+" let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+" let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
