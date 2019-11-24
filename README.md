@@ -19,7 +19,7 @@ vimの設定ファイル.
 
 4. ターミナルを開いて, 先程インストールしたフォントを設定する.
 
-5. `fzf`をインストールする．
+5. [junegunn/fzf](https://github.com/junegunn/fzf#using-git)をインストールする．
     ```bash
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
@@ -35,3 +35,7 @@ vimの設定ファイル.
     ```bash
     :call dein#install()
     ```
+
+## 使い方
+### fzf.vim の使い方
+- [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
