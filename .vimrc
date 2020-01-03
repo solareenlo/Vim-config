@@ -60,6 +60,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('frazrepo/vim-rainbow')
   call dein#add('junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' })
   call dein#add('junegunn/fzf.vim')
+  " VIM Table Mode for instant table creation.
+  call dein#add('dhruvasagar/vim-table-mode')
   call dein#end()
   call dein#save_state()
 endif
@@ -176,8 +178,6 @@ imap [ []<LEFT>
 imap ( ()<LEFT>
 " 現在のモードを表示
 set showmode
-" タブ文字の表示幅
-set tabstop=4
 " カラースキームの設定
 " colorscheme desert
 " colorscheme molokai
@@ -246,6 +246,35 @@ function! s:GetHighlight(hi)
   return hl
 endfunction
 
+"----------------------------------------------------------
+" vim-table-mode
+"----------------------------------------------------------
+" `:TableModeTaggle` を `||` と `__` で有効化・無効化する
+function! s:isAtStartOfLine(mapping)
+  let text_before_cursor = getline('.')[0 : col('.')-1]
+  let mapping_pattern = '\V' . escape(a:mapping, '\')
+  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+endfunction
+
+inoreabbrev <expr> <bar><bar>
+          \ <SID>isAtStartOfLine('\|\|') ?
+          \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+inoreabbrev <expr> __
+          \ <SID>isAtStartOfLine('__') ?
+          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+
+let g:table_mode_corner = '|'
+
+" mapleaderの設定
+:let mapleader = ','
+
+" 検索位置が何番目かを表示
+set shortmess-=S
+
+"----------------------------------------------------------
+" vim-anzu
+"----------------------------------------------------------
 " mapping
 nmap n <Plug>(anzu-n-with-echo)
 nmap N <Plug>(anzu-N-with-echo)
