@@ -39,3 +39,8 @@ vimの設定ファイル.
 ## 使い方
 ### fzf.vim の使い方
 - [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
+
+### dein を使ったプラグインのアップデートの仕方
+```bash
+:call dein#update()
+```
