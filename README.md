@@ -44,3 +44,8 @@ vimの設定ファイル.
 ```bash
 :call dein#update()
 ```
+
+### leader 確認
+```bash
+:echo mapleader
+```
