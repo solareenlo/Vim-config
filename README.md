@@ -15,7 +15,8 @@ vimの設定ファイル.
 
 - https://github.com/ryanoasis/nerd-fonts#patched-fonts
 
-- 上記のリンクから好きなフォントを選んで, `nerd-fonts/patched-fonts/Ubuntu/Regular/complete/`のように進んで, `*.ttf`や`*.otf`を`~/.fonts`ディレクトリに保存する.
+- Linux の場合、上記のリンクから好きなフォントを選んで, `nerd-fonts/patched-fonts/Ubuntu/Regular/complete/` のように進んで, `*.ttf` や `*.otf` を `~/.fonts` ディレクトリに保存する.
+- macOS の場合は、上記のリンクの README.md ファイルを読んで brew を使ってインストールするのが楽です.
 
 4. ターミナルを開いて, 先程インストールしたフォントを設定する.
 
